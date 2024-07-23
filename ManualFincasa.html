@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Usuario</title>
+    <link rel="stylesheet" href="diseño.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="empresa-nombre">Cabañas Fincasa</div>
+            <div>
+                <input type="text" id="searchBox" placeholder="Buscar...">
+            </div>
+        </div>
+    </header>
+    <main id="content">
+        <h1>Manual de Usuario</h1>
+        <div class="section-container">
+            <div class="section-header">
+                <span class="toggle-icon">+</span>
+                <h2>Introducción</h2>
+            </div>
+            <div class="section-content">
+                <p><strong>Antecedentes</strong></p>
+                <p>
+                    El sistema que se presenta ha sido desarrollado para satisfacer una necesidad de automatización dentro del emprendimiento "Cabañas del Campo, FINCASA", ubicado en la localidad de San Pedro Zacapa, Santa Bárbara. Este sistema ha sido diseñado para agilizar los procesos internos, mejorar la calidad de la atención y reducir el tiempo necesario para realizar una reserva y gestionar la facturación.
+                </p>
+                <p>
+                    Durante el desarrollo, nos enfocamos en crear interfaces amigables, intuitivas y fáciles de usar. También nos aseguramos de cubrir todas las necesidades expuestas por los propietarios del complejo de cabañas, con el objetivo principal de mejorar el proceso de reserva para todos sus clientes.
+                </p>
+                <p><strong>Objetivos del Sistema:</strong></p>
+                <ul>
+                    <li><u>Manejo y visualización de la lista de clientes</u> con sus respectivos datos.</li>
+                    <li><u>Gestión del proceso de reserva</u>, control de las fechas y reservas por cada cabaña del complejo.</li>
+                    <li><u>Automatización del proceso de facturación</u>, incluyendo un apartado de cotización.</li>
+                    <li><u>Gestión y manejo de las cabañas</u> y servicios prestados por FINCASA.</li>
+                    <li><u>Un sistema que cumpla con los requisitos</u> establecidos por los clientes dueños del emprendimiento FINCASA.</li>
+                </ul>
+                <p><strong>Introducción:</strong></p>
+                <p>
+                    La razón fundamental de nuestro sistema es mejorar los procesos realizados en "FINCASA" en cuanto al manejo de clientes, fechas para reservas y facturación. Anteriormente, estos procesos no estaban automatizados y se realizaban manualmente con papel y lápiz. Nuestro objetivo principal durante el desarrollo de este sistema fue la correcta automatización de estos procesos, facilitando el trabajo del personal.
+                </p>
+                <p><strong>¿A quién está dirigido el manual?</strong></p>
+                <p>
+                    Este manual está dirigido a las personas administradoras del emprendimiento "Cabañas del Campo, FINCASA" y demás empleados, ya que son la parte principal y fundamental de nuestro sistema. Les permitirá manejar las reservaciones de su complejo de manera más segura y ágil.
+                </p>
+            </div>
+        </div>
+
+        <div class="section-container" id="nombre-sistema">
+            <div class="section-header">
+                <span class="toggle-icon">+</span>
+                <h2>Informacion del sistema</h2>
+            </div>
+            <div class="section-content">
+                <p><strong>Nombre del sistema</strong> Sistema de Facturacion FINCASA.</p>
+                <p><strong>Versión del Sistema</strong> Esta version del sistema es la 2.0</p>
+                <p><strong>Fecha de Elaboración</strong> Elaborado el dia 21 de Julio del 2024.</p>
+                <p><strong>Tipo de manual</strong> Este es un Manual de Usuario.</p>
+                <p><strong>Area donde fue elaborado</strong> Comayaguela MDC Francisco Morazan.</p>
+            </div>
+        </div>
+
+        <div class="section-container" id="generalidades-sistema">
+            <div class="section-header">
+                <span class="toggle-icon">+</span>
+                <h2>Generalidades del Sistema</h2>
+            </div>
+            <div class="section-content">
+                <p><strong>Descripción del proyecto</strong></p>
+                <p>El sistema desarrollado para “Cabañas del Campo, FINCASA”, se compone de distintos módulos, los cuales en su mayoría son dependientes.</p>
+                <p>En primera instancia tenemos una medida de seguridad, la cual se ha diseñado como un inicio de sesión en el cual el usuario podrá ingresar sus credenciales al sistema para validar que este pertenece al mismo, siendo éste nuestro primer módulo independiente.</p>
+                <p>Nuestro sistema está realizado para solo aceptar un rol de usuario, el cual podríamos llamar Administrador, ya que este accede a todos los elementos y bondades de nuestra aplicación.</p>
+                <p>Una vez estemos dentro del sistema nos podemos encontrar con un menú muy atractivo visualmente que nos mostrará todos los procesos que podemos realizar. Existen seis opciones diferentes, dentro de las cuales se encuentran:</p>
+                <ul>
+                    <li>Realización de reservación</li>
+                    <li>Consulta de fechas</li>
+                    <li>Facturación y consulta de reservas</li>
+                    <li>Cotización</li>
+                    <li>Mantenimiento de cabañas</li>
+                    <li>Mantenimiento de servicios</li>
+                </ul>
+                <p>Dentro de todas estas opciones está contemplado nuestro sistema, el cual permite un manejo completo de las reservas, permitiendo exportar facturas de las mismas. Dentro de nuestro elemento principal que son las reservaciones, podemos editar las reservas, eliminar elementos como cabañas o servicios, y modificar estos mismos. Aparte de poder enviar la reservación por medio de correo electrónico al cliente mediante un mensaje completamente automatizado.</p>
+                <p>Otro punto a destacar, pero no menos importante, es el manejo de los servicios y cabañas, los cuales pueden ser modificados, eliminados o, si el usuario lo decide, puede agregar uno nuevo. Estos elementos son importantes ya que nos permiten tener lista nuestra aplicación en caso de que el complejo de cabañas sufra cambios en cuanto a sus productos y servicios.</p>
+                <p>El alcance de nuestra aplicación va desde el registro de clientes, consulta de fechas, realización de reservas, confirmación de reserva mediante correo electrónico, hasta la generación de reportes como ser facturas y cotizaciones, las cuales serán almacenadas de forma local para su posterior consulta cuando se requiera.</p>
+            </div>                
+        </div>
+
+        <div class="section-container" id="requerimientos">
+            <div class="section-header">
+                <span class="toggle-icon">+</span>
+                <h2>Requerimientos Técnicos del Sistema, Instalación y Configuración</h2>
+            </div>
+            <div class="section-content">
+                <p>Para la instalación del sistema se requerirá de lo siguiente:</p>
+                <ul>
+                    <li>Conexión de internet estable obligatoria.</li>
+                    <li>La rapidez de descarga o el ancho de banda de la conexión no importan, pero sí influyen en cuanto tarde la descarga en finalizar.</li>
+                    <li>Computadora que tenga el sistema operativo Windows instalado.</li>
+                    <li>Versión Windows 10 o posterior.</li>
+                    <li>4GB de RAM como mínimo.</li>
+                    <li>Computadora de Escritorio o Laptop.</li>
+                    <li>Pantalla que contenga una Resolución de 1024x768 o superior.</li>
+                    <li>Periféricos: Teclado y ratón u otro dispositivo de entrada.</li>
+                    <li>Procesador de al menos 2 Ghz.</li>
+                    <li>La memoria de disco duro requerida dependerá de la cantidad de archivos PDF que desea ingresar en su computador.</li>
+                    <li>Lugar para poder descargar el programa, la cual se le puede facilitar tanto en la plataforma de Whatsapp como también en la plataforma de Google Drive.</li>
+                </ul>
+                <p><strong>Instalación</strong></p>
+                <p>Para la primera instalación en la computadora principal, además de los requerimientos antes mencionados, se ocupará un breve periodo de soporte técnico en el que el grupo presente hará las respectivas instalaciones de los recursos necesarios para la ejecución del sistema, como lo serían: el gestor de base de datos SQL Server Management Studio, la creación de una cuenta de servicio, entre otros. Se recurre a decir que estos recursos sólo serán ocupados en la computadora principal y la descarga de los mismos se harán por parte de nuestro grupo como un soporte técnico dado al sistema.</p>
+                <p>Para la utilización del programa no se ocuparía más que una decente conexión a internet y revisar que la base de datos está en ejecución. Si la base de datos no llegara a estar en ejecución, por favor refiérase al apartado de manejo de errores para solucionarlo.</p>
+                <p><strong>Pasos para la instalación del programa:</strong></p>
+                <p><strong>Paso #1:</strong> Para el primer paso dentro de la instalación del sistema entraría lo que es descargar el instalador del programa de un sitio como lo podría ser Whatsapp o en un futuro Google Drive.</p>
+                <p><strong>Paso #2:</strong> Una vez se haya descargado la carpeta comprimida, se irá al apartado de descargas dentro de su explorador de archivos en donde podrá ver su descarga.</p>
+                <p><strong>Paso #3:</strong> Extraer los archivos: Haz clic derecho en el archivo comprimido FINCASA y selecciona la opción Extraer todo. En algunos casos, si tienes instalado un programa específico para archivos comprimidos como WinRAR o 7-Zip, podrías tener que seleccionar Abrir con y luego elegir el programa.</p>
+                <p><strong>Paso #4:</strong> Para asegurarse de que la carpeta no se pierda le dará <em>click derecho</em> una vez a la carpeta hasta que quede resaltado en azul como en la imagen anterior. Después, presionará en su teclado las teclas “ctrl” y la tecla “x” a la vez y se irá al apartado de PC.</p>
+                <p><strong>Paso #5:</strong> Le hará doble click en donde dice Windows (C:) (En vez de la letra C puede haber una letra D u otras pero es lo mismo). Después de entrar en la pantalla presione la tecla “ctrl” y la tecla “v” al mismo tiempo para pegar el archivo.</p>
+                <p><strong>Paso #6:</strong> En la pantalla en la que se encuentre la carpeta debería quedar así, si ese no es el caso váyase a la sección de descargas y repita los pasos desde el Paso #4.</p>
+                <p><strong>Paso #7:</strong> Busca el archivo de instalación: Una vez extraídos los archivos, abre la carpeta que se creó a partir de la extracción. Dentro de ella, busca un archivo llamado SETUP.exe o simplemente SETUP.</p>
+                <p><strong>Paso #8:</strong> Sigue el asistente de instalación: Sigue las instrucciones proporcionadas por el asistente de instalación, selecciona la opción instalar.</p>
+                <p><strong>Paso #9:</strong> Una vez se complete la instalación, automáticamente se ejecutará la aplicación.</p>
+                <p><strong>Paso #10:</strong> Cuándo queramos volver a iniciar la aplicación podemos buscarlo directamente desde el buscador de Windows.</p>
+            </div>
+        </div>
+
+        <div class="section-container" id="entrada-salida">
+            <div class="section-header">
+                <span class="toggle-icon">+</span>
+                <h2>Entrada y Salida del Sistema</h2>
+            </div>
+            <div class="section-content">
+                <p><strong>Entrada del sistema - Inicio de sesión</strong></p>
+                <p>Al iniciar el sistema, lo primero que podrá ver será nuestro inicio de sesión el cual posee dos cajas de texto que solicitan las credenciales necesarias para poder ingresar a la aplicación. En el primer campo deberá introducir el nombre del usuario que se le fue asignado, en la segunda caja de texto deberá introducir la contraseña respectiva para ese usuario, luego de haber llenado estos campos de forma correcta podrá presionar el botón de “Ingresar” de esta manera estará entrando al sistema, en el caso de que sus credenciales sean correctas se mostrará el menú con todas las opciones que puede realizar.</p>
+                <p><strong>Salida del sistema</strong></p>
+                <p>En todos los formularios del sistema se encontrará con un botón ilustrado con una “X” la cual sirve para indicar que si acciona este botón estará cerrando completamente la aplicación.</p>
+                <p>En algunas otras pantallas o formularios podrá encontrarse con elementos que le permiten salir del formulario o pantalla en la que se encuentra.</p>
+            </div>
+        </div>
+
+        <div class="section-container" id="uso-aplicacion">
+            <div class="section-header">
+                <span class="toggle-icon">+</span>
+                <h2>Uso de la Aplicación</h2>
+            </div>
+            <div class="section-content">
+                <h4>Diagramas Conceptuales General de Funcionamiento</h4>
+                <img src="/imagenes/Diagrama1.jpg" alt="Imagen descriptiva">
+                <img src="/imagenes/Diagrama2.jpg" alt="Imagen descriptiva">
+                <h4>Pantallas</h4>
+                <p>Pagina de Inicio</p>
+                <img src="/imagenes/paginaPrincipal.jpg" alt="Imagen descriptiva">
+                <p>Agregar Cabaña</p>
+                <img src="/imagenes/AgregarCabaña.jpg" alt="Imagen descriptiva">
+                <P>Agregar servicio</P>
+                <img src="/imagenes/Agregarservicio.jpg" alt="Imagen descriptiva">
+                <p>Clientes</p>
+                <img src="/imagenes/clientes.jpg" alt="Imagen descriptiva">
+                <p>Consultar Fechas</p>
+                <img src="/imagenes/consultarfecha.jpg" alt="Imagen descriptiva">
+                <p>Editar Reservas</p>
+                <img src="/imagenes/Editarreserva.jpg" alt="Imagen descriptiva">
+                <p>Enviar la reserva al correo</p>
+                <img src="/imagenes/image.png" alt="Imagen descriptiva">
+                <p>Login</p>
+                <img src="/imagenes/Login.jpg" alt="Imagen descriptiva">
+                <p>Seleccionar fechas</p>
+                <img src="/imagenes/seleccionfechas.jpg" alt="Imagen descriptiva">
+                <p>Detalles Hospedaje</p>
+                <img src="/imagenes/DetallesHospedaje.jpg" alt="Imagen descriptiva">
+                <p>Gestion de Usuarios</p>
+                <img src="/imagenes/GestionUsuarios.jpg" alt="Imagen descriptiva">
+                <p>Ejemplo Cotizacion</p>
+                <img src="/imagenes/Cotizacion.jpg" alt="Imagen descriptiva">
+                <p>Ejemplo Factura</p>
+                <img src="/imagenes/Factura.jpg" alt="Imagen descriptiva">
+            </div>
+        </div>
+
+        <div class="section-container" id="manejo-errores">
+            <div class="section-header">
+                <span class="toggle-icon">+</span>
+                <h2>Manejo de Errores</h2>
+            </div>
+            <div class="section-content">
+                <p><strong>Tabla de Errores</strong></p>
+                <p>1. Si la aplicación parece estar inactiva, tenga paciencia y permítale completar sus tareas actuales. Durante la carga o descarga de archivos, especialmente si son de gran tamaño, es común experimentar cierta lentitud, la cual también puede verse afectada por la velocidad de su conexión a Internet.</p>
+                <p>2. Si encuentra que no puede utilizar la aplicación mientras maneja archivos, y si la aplicación se detiene o permanece en la misma pantalla por un tiempo prolongado, superior a treinta minutos, debería verificar si su máquina se encuentra detenida. Este tipo de comportamiento suele estar asociado con problemas de rendimiento.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mensaje de Error</th>
+                            <th>Descripción</th>
+                            <th>Solución Sugerida</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Error de Conexión</td>
+                            <td>La aplicación no puede establecer conexión con el servidor.</td>
+                            <td>Verificar la conexión a Internet y volver a intentarlo.</td>
+                        </tr>
+                        <tr>
+                            <td>Error de Autenticación</td>
+                            <td>Nombre de usuario o contraseña incorrectos.</td>
+                            <td>Verificar las credenciales e intentar nuevamente.</td>
+                        </tr>
+                        <tr>
+                            <td>Error de Reserva</td>
+                            <td>No se pudo completar la reserva.</td>
+                            <td>Asegurarse de que todos los campos requeridos estén llenos y en el formato adecuado. Volver a intentar la reserva.</td>
+                        </tr>
+                        <tr>
+                            <td>Error de Tiempo de Espera</td>
+                            <td>La operación excedió el tiempo de espera.</td>
+                            <td>Verificar la conexión a Internet y volver a intentar la operación.</td>
+                        </tr>
+                        <tr>
+                            <td>Error Interno de Aplicación</td>
+                            <td>Ocurrió un error inesperado en la aplicación.</td>
+                            <td>Reiniciar la aplicación y, si el error continúa, reinstalar la aplicación o contactar al soporte técnico.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Si la aplicación se congela o no avanza más allá de la pantalla de inicio de sesión, es posible que exista un inconveniente con el servidor SQL. Para solucionar este problema, siga los pasos a continuación:</p>
+                <p><strong>Paso #1:</strong> Ingresar la palabra "service" o "servicios" en el buscador de Windows y seleccionar la primera opción que aparece en la imagen.</p>
+                <p><strong>Paso #2:</strong> Haga clic en el archivo mencionado y desplácese hacia abajo hasta localizar una línea que indique “SQL Server (SQLEXPRESS)”.</p>
+                <p><strong>Paso #3:</strong> Presionar clic derecho y darle la segunda opción que sería "detener".</p>
+                <p><strong>Paso #4:</strong> Presionar clic derecho y darle a la primera opción que sería "iniciar".</p>
+                <p>Aguarde a que finalice el proceso y cierre todas las aplicaciones o ventanas que haya abierto. Si el problema se origina en el servidor de bases de datos, debería estar resuelto en este punto.</p>
+                <p>Si se está experimentando problemas en el uso de la aplicación como por ejemplo, un rendimiento lento, conexiones bloqueadas, o comportamientos inesperados, un reinicio puede limpiar el estado actual del servidor y solucionar problemas de funcionamiento sin identificar.</p>
+            </div>
+        </div>
+
+        <div class="section-container" id="contingencias-soporte">
+            <div class="section-header">
+                <span class="toggle-icon">+</span>
+                <h2>Contingencias y Soporte Técnico</h2>
+            </div>
+            <div class="section-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Teléfono</th>
+                            <th>Correo Electrónico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ángel Francisco Moncada Izaguirre</td>
+                            <td>89585098</td>
+                            <td>angelizaguirre.g@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Jose Humberto Mejia Salgado</td>
+                            <td>97254501</td>
+                            <td>jose9salgado08@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Jorge Mauricio Tinoco Pacheco</td>
+                            <td>3185-6442</td>
+                            <td>tinocojorge6@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Sayd Josue Rodriguez Merlo</td>
+                            <td>9714-3869</td>
+                            <td>saydr2210@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Marvin Gerardo Serpas Moreno</td>
+                            <td>3284-2471</td>
+                            <td>marvinserpasm@gmail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section-container" id="glosario">
+            <div class="section-header">
+                <span class="toggle-icon">+</span>
+                <h2>Glosario de Términos</h2>
+            </div>
+            <div class="section-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Término</th>
+                            <th>Definición</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Autenticación</td>
+                            <td>Proceso mediante el cual un sistema verifica la identidad de un usuario, generalmente a través de un nombre de usuario y contraseña, para conceder acceso a sus servicios.</td>
+                        </tr>
+                        <tr>
+                            <td>Base de Datos</td>
+                            <td>Conjunto organizado de datos almacenados digitalmente en una computadora que son accesibles de manera eficiente para su consulta y actualización.</td>
+                        </tr>
+                        <tr>
+                            <td>Cabañas del Campo, FINCASA</td>
+                            <td>Emprendimiento dedicado al alquiler de cabañas, cuyos procesos de reservación y facturación han sido automatizados mediante un sistema informático.</td>
+                        </tr>
+                        <tr>
+                            <td>Cotización</td>
+                            <td>Documento que detalla el precio estimado de los servicios o productos ofrecidos, en este caso, el alquiler de cabañas.</td>
+                        </tr>
+                        <tr>
+                            <td>Facturación</td>
+                            <td>Proceso de creación de un registro oficial (factura) que detalla los productos o servicios vendidos al cliente, junto con los precios y condiciones.</td>
+                        </tr>
+                        <tr>
+                            <td>Gestión de Reservas</td>
+                            <td>Proceso de organizar y controlar las reservaciones de cabañas, incluyendo la asignación de fechas, seguimiento de disponibilidad y confirmación de reservas.</td>
+                        </tr>
+                        <tr>
+                            <td>Interfaz de Usuario</td>
+                            <td>Componente de un sistema que permite la interacción entre el usuario y el ordenador, ofreciendo elementos visuales y funcionales para navegar y operar el sistema.</td>
+                        </tr>
+                        <tr>
+                            <td>Mantenimiento de Cabañas</td>
+                            <td>Proceso de administrar y actualizar la información relativa a las cabañas disponibles, incluyendo la adición, modificación o eliminación de datos en el sistema.</td>
+                        </tr>
+                        <tr>
+                            <td>Mantenimiento de Servicios</td>
+                            <td>Gestión y actualización de los servicios ofrecidos por el complejo, tales como limpieza, alimentos, entre otros.</td>
+                        </tr>
+                        <tr>
+                            <td>PDF (Formato de Documento Portátil)</td>
+                            <td>Formato de archivo utilizado para presentar e intercambiar documentos de manera fiable, independientemente del software, hardware o sistema operativo.</td>
+                        </tr>
+                        <tr>
+                            <td>Resolución de Pantalla</td>
+                            <td>Refiere a la cantidad de píxeles que se pueden mostrar en la pantalla de un dispositivo, medida en términos de ancho y alto (por ejemplo, 1024x768).</td>
+                        </tr>
+                        <tr>
+                            <td>SQL Server Management Studio (SSMS)</td>
+                            <td>Herramienta integrada de entorno para administrar cualquier infraestructura de SQL, desde bases de datos SQL Server hasta Azure SQL Database.</td>
+                        </tr>
+                        <tr>
+                            <td>Sistema Operativo Windows</td>
+                            <td>Serie de sistemas operativos gráficos producidos por Microsoft, utilizados en computadoras personales y servidores.</td>
+                        </tr>
+                        <tr>
+                            <td>Soporte Técnico</td>
+                            <td>Servicio que proporciona asistencia con el hardware o software de una computadora, en este caso, ayudando a la instalación, configuración y resolución de problemas del sistema de gestión para FINCASA.</td>
+                        </tr>
+                        <tr>
+                            <td>Tabla de Errores</td>
+                            <td>Listado que describe los posibles errores que pueden surgir durante el uso del sistema, proporcionando detalles sobre la causa y las soluciones recomendadas.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+<footer>
+    <p>&copy; 2024 Cabañas Fincasa</p>
+</footer>
+</html>
